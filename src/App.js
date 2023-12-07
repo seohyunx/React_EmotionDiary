@@ -12,6 +12,7 @@ function App() {
       <div className="App">
         <h2>App.js</h2>
         <Routes>
+          {/* path가 /(인덱스)를 가리키면 <Home/> 컴포넌트를 렌더링하라 */}
           <Route path="/" element={<Home />} />
         </Routes>
       </div>
