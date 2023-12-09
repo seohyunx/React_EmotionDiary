@@ -1,6 +1,7 @@
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
+import RouteTest from "./components/RouteTest";
 import Home from "./pages/Home";
 import New from "./pages/New";
 import Edit from "./pages/Edit";
@@ -14,7 +15,12 @@ function App() {
         <Routes>
           {/* path가 /(인덱스)를 가리키면 <Home/> 컴포넌트를 렌더링하라 */}
           <Route path="/" element={<Home />} />
+          <Route path="/new" element={<New />} />
+          <Route path="/edit" element={<Edit />} />
+          <Route path="/diary" element={<Diary />} />
         </Routes>
+        {/* <a href={"/new"}>NEW로 이동</a> */}
+        <RouteTest />
       </div>
     </BrowserRouter>
   );
