@@ -6,6 +6,9 @@ import New from "./pages/New";
 import Edit from "./pages/Edit";
 import Diary from "./pages/Diary";
 
+// Components
+import MyButton from "./components/MyButton";
+
 function App() {
   //process.env가 작동하지 않을 때 참고
   const env = process.env;
@@ -24,6 +27,11 @@ function App() {
         <img src={process.env.PUBLIC_URL + `/assets/emotion4.png`} />
         <img src={process.env.PUBLIC_URL + `/assets/emotion5.png`} />
 
+        <MyButton
+          text={"버튼"}
+          onClick={() => alert("버튼 클릭")}
+          type={"positive"}
+        />
         <Routes>
           {/* path가 /(인덱스)를 가리키면 <Home/> 컴포넌트를 렌더링하라 */}
           <Route path="/" element={<Home />} />
