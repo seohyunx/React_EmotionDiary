@@ -1,3 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Yeon+Sung&display=swap");
+
+body {
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Nanum Pen Script";
+  min-height: 100vh;
+  margin: 0px;
+}
+
+/* Media Query (반응형웹을 도와주는 CSS 도구)
+ - 괄호 안에 있는 모든 CSS 규칙들은
+   이 웹브라우저의 화면이 650px 이상일 때만 이 규칙을 적용하겠다 */
+@media (min-width: 650px) {
+  .App {
+    width: 640px;
+  }
+}
+
+/* 웹 브라우저 화면이 650픽셀 이하일 때
+   90%를 차지하겠단 */
+@media (max-width: 650px) {
+  .App {
+    width: 90vw;
+  }
+}
+
+#root {
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
 .App {
-  padding: 20px;
+  min-height: 100vh;
+  padding-left: 20px;
+  padding-right: 20px;
 }
