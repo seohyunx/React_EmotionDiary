@@ -19,14 +19,6 @@ function App() {
       <div className="App">
         <h2>App.js</h2>
 
-        {/* process.env.PUBLIC_URL
-        - 어떤경로에 있든 public 경로를 바로 쓸 수있는 명령어 */}
-        <img src={process.env.PUBLIC_URL + `/assets/emotion1.png`} />
-        <img src={process.env.PUBLIC_URL + `/assets/emotion2.png`} />
-        <img src={process.env.PUBLIC_URL + `/assets/emotion3.png`} />
-        <img src={process.env.PUBLIC_URL + `/assets/emotion4.png`} />
-        <img src={process.env.PUBLIC_URL + `/assets/emotion5.png`} />
-
         <MyButton
           text={"버튼"}
           onClick={() => alert("버튼 클릭")}
