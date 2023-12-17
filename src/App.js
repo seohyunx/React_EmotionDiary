@@ -24,6 +24,12 @@ function App() {
           onClick={() => alert("버튼 클릭")}
           type={"positive"}
         />
+        <MyButton
+          text={"버튼"}
+          onClick={() => alert("버튼 클릭")}
+          type={"negative"}
+        />
+        <MyButton text={"버튼"} onClick={() => alert("버튼 클릭")} />
         <Routes>
           {/* path가 /(인덱스)를 가리키면 <Home/> 컴포넌트를 렌더링하라 */}
           <Route path="/" element={<Home />} />

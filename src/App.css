@@ -52,5 +52,5 @@ body {
   /* 버튼 안에 있는 글자가 짤려서 두줄이 되지 않도록 하는 속성 */
   white-space: nowrap;
 
-  font-family: Nanum Pen Script;
+  font-family: "Nanum Pen Script";
 }
