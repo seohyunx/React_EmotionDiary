@@ -8,6 +8,7 @@ import Diary from "./pages/Diary";
 
 // Components
 import MyButton from "./components/MyButton";
+import MyHeader from "./components/MyHeader";
 
 function App() {
   //process.env가 작동하지 않을 때 참고
@@ -17,6 +18,18 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
+        <MyHeader
+          headText={"App"}
+          leftChild={
+            <MyButton text={"왼쪽 버튼"} onClick={() => alert("왼쪽 클릭")} />
+          }
+          rightChild={
+            <MyButton
+              text={"오른쪽 버튼"}
+              onClick={() => alert("오른쪽 클릭")}
+            />
+          }
+        />
         <h2>App.js</h2>
 
         <MyButton
