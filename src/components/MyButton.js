@@ -3,9 +3,12 @@ import React from "react";
 //MyButton_${type}
 //MyButton을 타입에 따라 동적으로 설정
 const MyButton = ({ text, type, onClick }) => {
+  //btnType이 이 배열 안에 있다면 ? type 반환 : 없다면 'default'를 반환
+  const btnType = ["positive", "negative"].includes(type) ? type : "default";
+
   return (
     <button
-      className={["MyButton", `MyButton_${type}`].join(" ")}
+      className={["MyButton", `MyButton_${btnType}`].join(" ")}
       onClick={onClick}
     >
       {text}
