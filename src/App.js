@@ -57,7 +57,7 @@ function App() {
         emotion,
       },
     });
-    dataId.current += 1;
+    // dataId.current += 1;
   };
   // REMOVE
   // EDIT
