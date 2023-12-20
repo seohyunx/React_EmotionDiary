@@ -64,7 +64,19 @@ function App() {
   const onRemove = (targetId) => {
     dispatch({ type: "REMOVE", targetId });
   };
+
   // EDIT
+  const onEdit = (targetId, date, content, emotion) => {
+    dispatch({
+      type: "EDIT",
+      data: {
+        id: targetId,
+        date: new Date(date).getTime(),
+        content,
+        emotion,
+      },
+    });
+  };
 
   return (
     <BrowserRouter>
