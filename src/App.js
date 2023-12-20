@@ -57,9 +57,13 @@ function App() {
         emotion,
       },
     });
-    // dataId.current += 1;
+    dataId.current += 1;
   };
+
   // REMOVE
+  const onRemove = (targetId) => {
+    dispatch({ type: "REMOVE", targetId });
+  };
   // EDIT
 
   return (
