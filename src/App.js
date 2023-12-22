@@ -66,6 +66,7 @@ function App() {
   };
 
   // EDIT
+  // 새로운 일기데이터를 객체로 만들어서 data 라는 이름으로 전달
   const onEdit = (targetId, date, content, emotion) => {
     dispatch({
       type: "EDIT",
