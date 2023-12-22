@@ -39,6 +39,7 @@ const reducer = (state, action) => {
 };
 
 export const DiaryStateContext = React.createContext();
+export const DiaryDispatchContext = React.createContext();
 
 function App() {
   //process.env가 작동하지 않을 때 참고
@@ -82,19 +83,29 @@ function App() {
   };
 
   return (
-    <BrowserRouter>
-      <div className="App">
-        <Routes>
-          {/* path가 /(인덱스)를 가리키면 <Home/> 컴포넌트를 렌더링하라 */}
-          <Route path="/" element={<Home />} />
-          <Route path="/new" element={<New />} />
-          <Route path="/edit" element={<Edit />} />
-          {/* Path Variable: URL의 일부를 변수로 사용하는 방식 */}
-          <Route path="/diary/:id" element={<Diary />} />
-        </Routes>
-        {/* <a href={"/new"}>NEW로 이동</a> */}
-      </div>
-    </BrowserRouter>
+    <DiaryStateContext.Provider value={data}>
+      <DiaryDispatchContext.Provider
+        value={{
+          onCreate,
+          onEdit,
+          onRemove,
+        }}
+      >
+        <BrowserRouter>
+          <div className="App">
+            <Routes>
+              {/* path가 /(인덱스)를 가리키면 <Home/> 컴포넌트를 렌더링하라 */}
+              <Route path="/" element={<Home />} />
+              <Route path="/new" element={<New />} />
+              <Route path="/edit" element={<Edit />} />
+              {/* Path Variable: URL의 일부를 변수로 사용하는 방식 */}
+              <Route path="/diary/:id" element={<Diary />} />
+            </Routes>
+            {/* <a href={"/new"}>NEW로 이동</a> */}
+          </div>
+        </BrowserRouter>
+      </DiaryDispatchContext.Provider>
+    </DiaryStateContext.Provider>
   );
 }
 
