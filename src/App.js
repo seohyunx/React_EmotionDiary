@@ -1,4 +1,4 @@
-import { useReducer, useRef } from "react";
+import React, { useReducer, useRef } from "react";
 
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -37,6 +37,8 @@ const reducer = (state, action) => {
 
   return newState;
 };
+
+export const DiaryStateContext = React.createContext();
 
 function App() {
   //process.env가 작동하지 않을 때 참고
