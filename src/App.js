@@ -99,7 +99,7 @@ function App() {
               <Route path="/new" element={<New />} />
               <Route path="/edit" element={<Edit />} />
               {/* Path Variable: URL의 일부를 변수로 사용하는 방식 */}
-              {/* <Route path="/diary/:id" element={<Diary />} /> */}
+              <Route path="/diary/:id" element={<Diary />} />
             </Routes>
             {/* <a href={"/new"}>NEW로 이동</a> */}
           </div>
