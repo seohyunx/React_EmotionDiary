@@ -10,9 +10,7 @@ const MyButton = ({ text, type, onClick }) => {
     <button
       className={["MyButton", `MyButton_${btnType}`].join(" ")}
       onClick={onClick}
-    >
-      {text}
-    </button>
+    ></button>
   );
 };
 
