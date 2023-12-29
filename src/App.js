@@ -38,9 +38,6 @@ const reducer = (state, action) => {
   return newState;
 };
 
-export const DiaryStateContext = React.createContext();
-export const DiaryDispatchContext = React.createContext();
-
 function App() {
   //process.env가 작동하지 않을 때 참고
   const env = process.env;
