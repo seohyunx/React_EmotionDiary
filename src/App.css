@@ -55,6 +55,21 @@ body {
   font-family: "Nanum Pen Script";
 }
 
+.MyButton_default {
+  background-color: #ececec;
+  color: black;
+}
+
+.MyButton_positive {
+  background-color: #64c964;
+  color: white;
+}
+
+.MyButton_negative {
+  background-color: #fd565f;
+  color: white;
+}
+
 /* Header */
 
 header {
