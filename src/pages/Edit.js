@@ -26,6 +26,21 @@ const Edit = () => {
       <button onClick={() => setSearchParams({ who: "hyunrok" })}>
         QS 바꾸기
       </button>
+
+      <button
+        onClick={() => {
+          navigate("/home");
+        }}
+      >
+        HOME으로 가기
+      </button>
+      <button
+        onClick={() => {
+          navigate(-1); // -1 : 한번 뒤로가기 의미
+        }}
+      >
+        뒤로가기
+      </button>
     </div>
   );
 };
